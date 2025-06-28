@@ -1,0 +1,9 @@
+<h1>🌼 श्रीकृष्ण को समर्पित</h1>
+<div id="quote">Loading quote...</div>
+<script>
+  fetch('/api/quote')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('quote').innerText = data.quote;
+    });
+</script>
